@@ -1,0 +1,535 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size  : 14px;
+}
+
+
+.wrapper {
+    max-width      : 1024px;
+    min-width      : 320px;
+    margin         : 0 auto;
+    margin-top     : 35px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+
+    @media (max-width: 992px) {
+        max-width     : 80%;
+        display       : flex;
+        flex-direction: column;
+        margin        : 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        max-width     : 80%;
+        display       : flex;
+        flex-direction: column;
+        margin        : 0 auto;
+    }
+
+    @media (max-width: 480px) {
+        max-width     : 80%;
+        display       : flex;
+        flex-direction: column;
+        margin        : 0 auto;
+    }
+
+    @media (max-width: 320px) {
+        max-width     : 80%;
+        display       : flex;
+        flex-direction: column;
+        margin        : 0 auto;
+    }
+
+}
+
+.info-text__description {
+    &--header {
+        margin-top: 36%;
+    }
+
+    &--main {
+        margin-top: 8%;
+    }
+
+    @media (max-width: 992px) {
+        &--header {
+            margin-top: 3%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &--header {
+            margin-top: 3%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &--header {
+            margin-top: 3%;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &--header {
+            margin-top: 3%;
+        }
+    }
+}
+
+.progress-bar h2 {
+    margin-top: 0.6em;
+}
+
+.form-header {
+    position: relative;
+}
+
+.form-header::before {
+    content         : "";
+    position        : absolute;
+    width           : 78%;
+    height          : 1px;
+    right           : 0;
+    top             : 0.6rem;
+    background-color: rgba(128, 128, 128, 0.5);
+
+    @media (max-width: 992px) {
+        display: none;
+
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
+    @media (max-width: 320px) {
+        display: none;
+    }
+
+}
+
+.navigation {
+    border       : 1px solid rgba(139, 134, 134, 0.5);
+    border-radius: 10px;
+    box-shadow   : 0 2px 3px rgba(0, 0, 0, 0.3);
+    padding      : 20px;
+    margin-bottom: 30px;
+}
+
+.navigation__list {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    list-style     : none;
+    padding        : 0;
+    margin         : 0;
+}
+
+.navigation__link {
+
+    &--personal {
+        color: #a723e4;
+    }
+
+    &--sectionOne {
+        color: rgb(5, 5, 5);
+    }
+
+    &--sectionThree {
+        color: rgb(66, 66, 238);
+    }
+
+    &--sectionFour {
+        color: rgb(255, 165, 0);
+    }
+
+    &--sectionFive {
+        color: rgb(238, 48, 48);
+    }
+}
+
+.progress-bar {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    margin-bottom  : 30px;
+    flex-wrap      : wrap;
+}
+
+.counter {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    width         : 65%;
+
+    //margin-top: 25px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+    }
+}
+
+.counter__step {
+    //width      : 90px;
+    width        : 21%;
+    height       : 15px;
+    text-align   : center;
+    line-height  : 15px;
+    border       : 1px solid rgba(139, 134, 134, 0.5);
+    box-shadow   : inset 0 0 3px rgba(0, 0, 0, 0.3);
+
+    &--one {
+        background-color         : rgb(67, 223, 67);
+        color                    : #ffffff;
+        border-top-left-radius   : 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &--five {
+        border-top-right-radius   : 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+
+.info-text {
+    width         : 30%;
+    vertical-align: middle;
+
+    @media (max-width: 992px) {
+        width : 100%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        width : 100%;
+        height: auto;
+    }
+
+    @media (max-width: 480px) {
+        width : 100%;
+        height: auto;
+    }
+
+    @media (max-width: 320px) {
+        width : 100%;
+        height: auto;
+    }
+}
+
+.main {
+    width: 68%;
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+    }
+}
+
+.form-info {
+    display       : flex;
+    flex-direction: column;
+    flex-wrap     : wrap;
+}
+
+.form-info__row {
+    display        : flex;
+    width          : 100%;
+    flex-direction : row;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+
+    &--three {
+        width: 66%;
+    }
+
+}
+
+
+.form-info__row--three .form-info__description {
+    width: 47%;
+
+}
+
+.form-info__row--four .form-info__description {
+    width: 100%;
+}
+
+
+.form-info__description {
+    position     : relative;
+    width        : 30%;
+    margin-bottom: 10px;
+
+    &--header {
+        display      : block;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 992px) {
+        &--header {
+            height: 35px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        &--header {
+            height: 35px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &--header {
+            height: 35px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &--header {
+            height: 35px;
+        }
+    }
+}
+
+.description__yesChangeName,
+.description__genderM {
+    display         : inline-block;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    background-color: #fff;
+    cursor          : pointer;
+}
+
+.description__noChangeName,
+.description__genderW {
+    display         : inline-block;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    background-color: #fff;
+    cursor          : pointer;
+}
+
+.form-info__description input[type="radio"]:checked+span {
+    background-color: rgb(67, 223, 67);
+}
+
+
+
+.form-info__description {
+    margin-bottom: 30px;
+}
+
+.form-info__description--footer {
+    display   : block;
+    margin-top: 10px;
+    font-size : 0.8rem;
+    color     : rgb(175, 171, 171);
+}
+
+
+.form-info__changeLastName,
+.form-info__inputGender {
+    position: absolute;
+    left    : -9999px;
+}
+
+
+.form-info__changeLastName,
+.form-info__inputGender {
+    display: none;
+}
+
+.form-info {
+    &__countrySelect {
+        width: 100%;
+    }
+
+    &__statusSelect {
+        width: 100%;
+    }
+
+    &__nativeCitySelect {
+        width: 100%;
+    }
+
+    &__inputFirstName {
+        width: 100%;
+    }
+
+    &__inputSecondName {
+        width: 100%;
+    }
+
+    &__inputlastName {
+        width: 100%;
+    }
+
+    &__birthdaySelect {
+        width: 28%;
+    }
+
+    @media (max-width: 992px) {
+        &__birthdaySelect {
+            width        : 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__birthdaySelect {
+            width        : 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__birthdaySelect {
+            width        : 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &__birthdaySelect {
+            width        : 100%;
+            margin-bottom: 5%;
+        }
+    }
+}
+
+.form-info__birthdaySelect {
+    &--mounth {
+        width: 40%;
+    }
+
+    @media (max-width: 992px) {
+        &--mounth {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &--mounth {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &--mounth {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &--mounth {
+            width: 100%;
+        }
+    }
+
+
+}
+
+.form-info__button {
+    position        : relative;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    align-items     : center;
+    box-sizing      : border-box;
+    height          : 60px;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius   : 10px;
+    padding         : 0 10px;
+
+}
+
+
+
+.btn {
+    width           : 20%;
+    height          : 55%;
+    background-color: rgba(139, 134, 134, 0.9);
+    border          : none;
+    border-radius   : 20px;
+    box-shadow      : inset 0 0 6px rgba(0, 0, 0, 0.3);
+    color           : #fff;
+
+    @media (max-width: 992px) {
+        width: 45%;
+    }
+
+    @media (max-width: 768px) {
+        width: 45%;
+    }
+
+    @media (max-width: 480px) {
+        width: 45%;
+    }
+
+    @media (min-width: 340px) and (max-width: 340px) {
+        width: 45%;
+    }
+}
+
+.btn-next {
+    background-color: rgb(67, 223, 67);
+}
+
+
+// style for BTN and Counter after click
+
+.btn_active {
+    background-color: rgb(67, 223, 67);
+}
+
+.counter__step--active {
+    background-color: rgb(67, 223, 67);
+    color           : white;
+}
+
+.counter__step--done {
+    background-color: rgb(46, 150, 46);
+    color           : white;
+}
+
+.btn-done {
+    display: none;
+    position        : absolute;
+}
+
+.btn-nextHidden {
+    display: none;
+}
+
+.btn-doneShow {
+    position        : absolute;
+    display         : block;
+    right: 5px;
+    background-color: rgb(67, 223, 67);
+}

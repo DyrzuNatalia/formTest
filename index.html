@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="all_form wrapper">
+
+        <div class="info-text">
+            <p class="info-text__description--header">*This is Photoshop's version of Lorem Ipsum. Proin gravida
+                nibh vel
+                velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctir<br><br>
+            </p>
+            <p class="info-text__description--main">
+                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctirThis is Photoshop's version of Lorem Ipsum. Proin gravida
+                nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctirThis is Photoshop's version of Lorem Ipsum. Proin gravida
+                nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctir
+            </p>
+        </div>
+
+        <div class="main">
+            <nav class="row navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link navigation__link--personal">Личный
+                            кабинет</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link navigation__link--sectionOne">Раздел 1</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link navigation__link--sectionTwo">Раздел 2</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link navigation__link--sectionThree">Раздел 3</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link navigation__link--sectionFour">Раздел 4</a></li>
+                    <li class="navigation__item"><a href="#"
+                            class="navigation__link navigation__link--sectionFive">Раздел 5</a></li>
+                </ul>
+            </nav>
+
+            <div class="row progress-bar">
+                <h2><span class="progress-bar__header">Заполните форму</span></h2>
+                <div class="counter">
+                    <div class="counter__step counter__step--one counter__step--active">1</div>
+                    <div class="counter__step counter__step--two">2</div>
+                    <div class="counter__step counter__step--three">3</div>
+                    <div class="counter__step counter__step--four">4</div>
+                    <div class="counter__step counter__step--five">5</div>
+                </div>
+            </div>
+
+            <div class="row wrap-form">
+                <h4 class="form-header">Общая информация</h4>
+                <form class="form-info" action="#" method="post">
+
+                    <div class="form-info__row form-info__row--one">
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Фамилия</span>
+                            <label for="lastName" class="form-info__description"></label>
+                            <input class="form-info__input form-info__inputlastName" type="text" id="lastName"
+                                placeholder="" minlength="1" maxlength="10" required>
+                        </div>
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Имя</span>
+                            <input class="form-info__input form-info__inputFirstName" type="text" id="firstName"
+                                placeholder="" minlength="1" maxlength="10" required>
+                        </div>
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Отчество<br></span>
+                            <input class="form-info__input form-info__inputSecondName" type="text" id="secondName"
+                                placeholder="" minlength="4" maxlength="10" required>
+                        </div>
+                    </div>
+
+                    <div class="form-info__row form-info__row--two">
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Меняли фамилию?<br></span>
+                            <label class="form-info__description">
+                                <input class="form-info__input form-info__changeLastName" type="radio" name="filter"
+                                    value="" checked>
+                                <span class="description__yesChangeName">Да</span>
+                            </label>
+                            <label class="form-info__description">
+                                <input class="form-info__input form-info__changeLastName" type="radio" name="filter"
+                                    value="">
+                                <span class="description__yesChangeName">Нет</span>
+                            </label>
+                        </div>
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Пол<br></span>
+                            <label class="form-info__description" for="gender1">
+                                <input class="form-info__input form-info__inputGender" id="gender1" type="radio"
+                                    name="filter1" value="" checked>
+                                <span class="description__genderM">Муж</span>
+                            </label>
+                            <label class="form-info__description" for="gender2">
+                                <input class="form-info__input form-info__inputGender" id="gender2" type="radio"
+                                    name="filter1" value="">
+                                <span class="description__genderW">Жен</span>
+                            </label>
+                        </div>
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Семейное положение<br></span>
+                            <label class="form-info__description form-info__description--filter" for="status"></label>
+                            <select class="form-info__input form-info__statusSelect" id="status" name="select">
+                                <option selected value="s1">Женат/Замужем</option>
+                                <option value="s1">Не женат/Не замужем</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-info__row form-info__row--three">
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Гражданство</span>
+                            <label class="form-info__description" for="nationality"></label>
+                            <select class="form-info__input form-info__countrySelect" name="select" size="1"
+                                id="nationality">
+                                <option selected value="s1">Украина</option>
+                            </select>
+                        </div>
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Дата рождения<br></span>
+
+                            <select class="form-info__input form-info__birthdaySelect" id="birthday" name="select"
+                                size="1">
+                                <option value="s1" selected>10</option>
+                                <option value="s1">11</option>
+                            </select>
+                            <select class="form-info__input form-info__birthdaySelect form-info__birthdaySelect--mounth"
+                                id="birthdayM" name="select" size="1">
+                                <option value="s1" selected>март</option>
+                                <option value="s1">апрель</option>
+                            </select>
+                            <select class="form-info__input form-info__birthdaySelect" id="birthdayY" name="select"
+                                size="1">
+                                <option value="s1" selected>1990</option>
+                                <option value="s1">1991</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-info__row form-info__row--four">
+                        <div class="form-info__description">
+                            <span class="form-info__description--header">Место рождения<br></span>
+                            <label class="form-info__description" for="native-city"></label>
+                            <select class="form-info__input form-info__nativeCitySelect" id="native-city" name="select">
+                                <option selected value="s1">Украина</option>
+                                <option selected value="s1">Украина</option>
+                            </select>
+                            <span class="form-info__description--footer">Например: Украина, Херсон<br></span>
+                        </div>
+                    </div>
+                    <div class="form-info__row form-info__button">
+                        <button type="button" class="btn btn-prev">Назад</button>
+                        <button type="button" class="btn next btn-next">Далее</button> 
+                        <button type="submit" class="btn done btn-done">Отправить</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+        <script src="index.js"></script>
+</body>
+
+</html>
