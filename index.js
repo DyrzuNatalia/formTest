@@ -1,6 +1,69 @@
 
 let counterSteps = $('.counter__step');
 
+
+
+let stepsNextArr = () => {
+
+  let stepsNext = [];
+
+  counterSteps.each(function (indx, element) {
+
+    if ($(element).hasClass("counter__step--active")) {
+      stepsNext.push($(element));
+    }
+
+  });
+
+  $(stepsNext).each(function (indx, element) {
+    $(element[indx]).addClass("counter__step--done");
+    $(element[indx]).removeClass("counter__step--active");
+  });
+  return;
+}
+
+let stepDoneArr = () => {
+
+  let stepsDone = [];
+
+  $('.counter__step').each(function (indx, element) {
+    if ($(element).hasClass("counter__step--done")) {
+      return;
+    } else {
+      stepsDone.push($(element));
+    }
+    return stepsDone;
+  });
+
+  $(stepsDone).each(function (indx, element) {
+    $(element[indx]).addClass("counter__step--active");
+  });
+  return;
+}
+
+
+
+let addClassStepDone = () => {
+
+  let counter = [];
+
+  counterSteps.each(function (indx, element) {
+
+    if ($(element).hasClass("counter__step--done")) {
+      counter.push($(element));
+    };
+  });
+
+  if (counter.length >= 4) {
+    $(".btn-next").removeClass("btn-next").addClass("btn-nextHidden");
+    $(".btn-done").removeClass("btn-done").addClass("btn-doneShow");
+  };
+  return;
+}
+
+
+
+
 $(document).ready(function () {
 
   // onclick button Next
@@ -9,51 +72,13 @@ $(document).ready(function () {
 
     $(".btn-prev").addClass("btn_active");
 
-    let stepsNext = [];
-    let stepsDone = [];
+    stepsNextArr();
 
-    $('.counter__step').each(function (indx, element) {
-      if ($(element).hasClass("counter__step--active")) {
-        stepsNext.push($(element));
-      }
-      return
-    });
+    stepDoneArr();
 
-    $(stepsNext).each(function (indx, element) {
-      $(element[indx]).addClass("counter__step--done");
-      $(element[indx]).removeClass("counter__step--active");
-    });
+    addClassStepDone();
 
-    $('.counter__step').each(function (indx, element) {
-      if ($(element).hasClass("counter__step--done")) {
-      } else {
-        stepsDone.push($(element));
-      }
-      return;
-    });
 
-    $(stepsDone).each(function (indx, element) {
-      $(element[indx]).addClass("counter__step--active");
-    });
-
-    let counter = [];
-
-    counterSteps.each(function (indx, element) {
-      if ($(element).hasClass("counter__step--done")) {
-        counter.push($(element));
-      } else {
-        return;
-      };
-      return;
-    });
-
-    if (counter.length >= 4) {
-      $(".btn-next").removeClass("btn-next").addClass("btn-nextHidden");
-      $(".btn-done").removeClass("btn-done").addClass("btn-doneShow");
-    } else {
-      return;
-    };
-    return;
   });
 
 
@@ -66,7 +91,7 @@ $(document).ready(function () {
       if ($(element).hasClass("counter__step--done")) {
         steps.unshift($(element));
       }
-      return
+      return;
     });
     $(steps).each(function (indx, element) {
       $(element[indx]).addClass("counter__step--active");
@@ -77,7 +102,7 @@ $(document).ready(function () {
       if ($(element).hasClass("counter__step--active")) {
         prevSteps.unshift($(element));
       }
-      return
+      return;
     });
     $(prevSteps).each(function (indx, element) {
       $(element[indx]).removeClass("counter__step--active");
@@ -88,8 +113,6 @@ $(document).ready(function () {
     counterSteps.each(function (indx, element) {
       if ($(element).hasClass("counter__step--done")) {
         counter.push($(element));
-      } else {
-        return;
       };
       return;
     });
@@ -97,24 +120,22 @@ $(document).ready(function () {
     if (counter.length < 4) {
       $(".next").removeClass("btn-nextHidden").addClass("btn-next");
       $(".done").removeClass("btn-doneShow").addClass("btn-done");
-    } else {
-      return;
     };
     return false;
   });
 
-// отправка формы 
+  // отправка формы 
 
-  $('form').submit(function() {
-  
+  $('form').submit(function () {
+
     var $form = $(this);
 
     $.post(
-        $form.attr('action'), 
-        $form.serialize()     
+      $form.attr('action'),
+      $form.serialize()
     );
 
     return false;
-});
+  });
 
 })
